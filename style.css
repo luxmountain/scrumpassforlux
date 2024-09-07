@@ -47,7 +47,7 @@ Author: Son
 *,
 *::before,
 *::after {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html {
@@ -55,7 +55,7 @@ html {
 }
 body {
     color: var(--secondary);
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 a{
     color: var(--pink);
@@ -66,8 +66,9 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--gray-dark);
-    font-weight: bold
+    /* color: var(--gray-dark); */
+    font-weight: bold;
+    color:red;
 }
 
 .btn {
@@ -213,10 +214,10 @@ h6 {
 .footer {
     color: rgba(255, 255, 255, 0.7)
 }
-
-.footer a {
-    color: #fff
+.post-item{
+    margin: 100px;
 }
+
 .gradient{
     background: rgb(43,43,43);
     background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%,var(--primary) 100%) !important;

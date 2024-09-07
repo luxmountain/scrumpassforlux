@@ -16,6 +16,7 @@ function lux_menus() {
    register_nav_menus($locations);
 }
 add_action('init','lux_menus');
+
 function lux_enqueue_styles() {
    $version = wp_get_theme()->get('Version');
 
@@ -33,5 +34,33 @@ function lux_enqueue_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'lux_enqueue_scripts' );
+
+function lux_widget_areas(){
+   register_sidebar(
+      array(
+         'before_title'=> '',
+         'after_title' => '',
+			'before_widget'=> '<ul class="social-list list-inline py-3 mx-auto">',
+         'after_widget'=> '</ul>',
+         'name'=> 'Sidebar Area',
+         'id' => 'sidebar-1',
+         'description' => 'Sidebar Widget Area',
+      )
+   );
+   register_sidebar(
+      array(
+         'before_title'=> '',
+         'after_title' => '',
+			'before_widget'=> '<ul class="social-list list-inline py-3 mx-auto">',
+         'after_widget'=> '</ul>',
+         'name'=> 'Footer Area',
+         'id' => 'footer-1',
+         'description' => 'Footer Widget Area',
+      )
+   );
+}
+
+add_action('widgets_init', 'lux_widget_areas');
+
 
 ?>
