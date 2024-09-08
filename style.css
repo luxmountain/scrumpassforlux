@@ -7,7 +7,7 @@ Tags: right-sidebar, responsive
 Author: Son
 */
 :root {
-    --blue: #007bff;
+    --blue: #0072C3;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #ee3577;
@@ -29,6 +29,10 @@ Author: Son
     --light: #c2c2c2;
     --lightgray: #eeeeee;
     --dark: #434242;
+    --blockquote: #4D4D4D;
+    --blog_title: #1F1F1F;
+    --post_content: #363636;
+    --post_meta: #696969;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -56,18 +60,6 @@ html {
 body {
     color: var(--secondary);
     overflow-x: hidden;
-}
-a{
-    color: var(--pink);
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--gray-dark);
-    font-weight: bold;
 }
 
 .btn {
@@ -759,13 +751,6 @@ div.comment:first-of-type {
     margin: 0;
 }
 
-.icon {
-    width: 16px; /* Adjust size as needed */
-    height: 16px; /* Adjust size as needed */
-    fill: grey; /* Set default icon color */
-    margin-right: 8px; /* Space between icon and text */
-}
-
 .icon-primary-color {
     fill: var(--dark); /* Default color, change as needed */
 }
@@ -775,24 +760,207 @@ div.comment:first-of-type {
 }
 
 .section-divider{
-    margin: 50px 50px 0 50px;
+    margin: 0 50px 0 50px;
 }
 
 .sony-banner {
     text-align: right;
     background-color: black;
-
 }
 
-.sony-logo {
-    display: inline-block;
+.sony-logo{
     width: 74px;
     height: 35px;
-    margin-right: 8px;
+}
+
+.section-article{
+    color: var(--post_content);
+    margin: 35px 0 48px;
+}
+
+.icon{
+    margin: 0 18px 0 0 ;
 }
 
 .banner{
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+main {
+    max-width: 1200px; /* Set the maximum width */
+    margin: auto;
+    padding: 0 15px;
+}
+
+.icon--brand-ps {
+    width: 60px;
+    height: 60px; /* Sets a fixed height */
+}
+
+.logo-wrap-menu{
+    background-color: var(--dark);
+}
+
+.site-header__region-selector-dropdown {
+    display: none; /* Initially hide the dropdown */
+    position: absolute;
+    background-color: white;
+    border-left: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    z-index: 100;
+}
+
+.region-select{
+    border-left: 1px solid var(--dark);
+}
+
+.site-header__region-selector-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icon-arrow-down{
+    width: 12px;
+    height: 12px;
+}
+
+.site-header__region-selector-dropdown li {
+    margin-bottom: 5px;
+}
+
+.region-selector-toggle {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.region-selector-toggle:focus {
+    outline: none;
+}
+
+.site-header__region-selector.active .site-header__region-selector-dropdown {
+    display: block;
+}
+
+.blog-title{
+    color:var(--dark);
+    text-decoration: none;
+    border: none;
+    font-size: 42px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.highlight-blog{
+    color: var(--blue);
+}
+
+.header-nav{
+    display: flex;
+}
+
+#primary-menu {
+    list-style-type: none; /* Remove bullet points */
+    padding-top: 1px; /* Remove padding from the list */
+    margin-left: -30px;
+    display: flex; /* Display the list items horizontally */
+    font-weight: 400;
+}
+
+#primary-menu .menu-item {
+    margin-right: 15px; /* Add space between list items */
+}
+
+#primary-menu .menu-item:last-child {
+    margin-right: 0; /* Remove space after the last item */
+}
+
+#primary-menu .menu-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.region-menu-wrap{
+    display: flex;
+}
+
+.navigation__primary{
+    display: flex;
+}
+
+.login-search-wrap{
+    display: flex;
+}
+
+.login-search-wrap svg {
+    width: 26px;
+    height: 26px;
+}
+
+.login-search-wrap {
+    display: flex;
+    justify-content: right; /* Centers the items horizontally */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 10px; /* Optional: Adds space between items */
+    padding: 50px;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.dark-mode,
+#js-login-link,
+.nav-button-search {
+    display: flex;
+    align-items: center;
+}
+
+.dark-mode__toggle,
+.login-link,
+.nav-button-search {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-button-search{
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.login-link {
+    color: #1f1f1f;
+    text-decoration: none; /* Optional: Removes underline from the link */
+}
+
+.login-link:hover {
+    color: #0072C3; /* Optional: Adds underline on hover for better UX */
+}
+
+#js-login-link{
+    font-size: 20px;
+    font-weight: 400;
+    color: #1F1F1F;
+    text-decoration: none;
+}
+
+#masthead{
+    position: relative; /* Creates a stacking context for z-index */
+    z-index: 10; /* Set this higher than the banner's z-index */
+    margin: -35px auto 0 auto; /* Your existing negative margin */
+    background-color: white; /* White background to cover the banner */
+    width: 100%; /* Ensure it spans the full width */
+    max-width: 1200px;
+}
+
+#site-navigation{
+    justify-content: space-between;
+    padding: 30px;
 }

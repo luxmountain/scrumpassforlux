@@ -35,6 +35,7 @@ function lux_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lux_enqueue_scripts' );
 
+
 function lux_widget_areas(){
    register_sidebar(
       array(
