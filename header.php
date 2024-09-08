@@ -17,9 +17,10 @@
 </head> 
 
 <body>
-    
-    <header class="header text-center">	    
-	    <a class="site-title pt-lg-4 mb-0" href="index.html">PlayStation</a>
+    <!-- Side Menu-->
+    <!-- <header class="header text-center">	    
+	    
+        <a class="site-title pt-lg-4 mb-0" href="index.html">Side Menu</a>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
@@ -54,10 +55,13 @@
         <?php
             dynamic_sidebar('sidebar-1');
         ?>
-    </header>
-    <div class="main-wrapper">
-	    <header class="page-title theme-bg-light text-center gradient py-5">
-			<h1 class="heading">
-                PlayStation
-            </h1>
-		</header>
+    </header> -->
+    <div class="pre-header">
+	    <div class="page-title text-center">
+            <div class="sony-banner">
+                <a href="https://www.playstation.com"><img src="https://blog.playstation.com/content/themes/playstation-2018/images/sonylogo-2x.jpg" alt="playstation.com" class="sony-logo"></a>
+            </div>
+            <div class="page-banner">
+                <img src="https://blog.playstation.com/tachyon/2024/09/2aa135a5b978b5c9ed1df9af967f88339dc22962.png?resize=1900%2C470&zoom=1" alt="banner" class="banner">
+            </div>
+        </div>
