@@ -225,9 +225,10 @@ body {
 .footer {
     color: rgba(255, 255, 255, 0.7)
 }
+
 .post-item{
-    margin: 100px;
     display: flex;
+    margin-bottom: 1.5rem;
 }
 
 .gradient{
@@ -1011,7 +1012,7 @@ button{
 }
 
 .featured-post {
-    margin: 0 auto;
+    width: 32.5%;
 }
 
 .sticky-posts {
@@ -1019,19 +1020,36 @@ button{
     flex-wrap: wrap;
 }
 
-.featured-post-item {
-    max-width: 20%; /* Ensures each post takes up a third of the available width */
-    margin: 0 1%;   /* Adds a small gap between columns */
+.post-thumbnail {
+    width: 100%; /* Ensures the thumbnail takes up the full width of its container */
+    max-width: 35%; /* Set a max-width for the thumbnails */
+    height: auto; /* Maintain aspect ratio */
+    display: flex;
+    justify-content: center; /* Center the image within the container */
+    align-items: center; /* Center the image vertically */
+    margin: 0 1rem 0 0;
 }
 
-.post-thumbnail {
-    margin-bottom: 15px;
-    max-width: 100%;
+.post-item .title-post{
+    font-size: 28px;
+    margin: 14px 0 28px;
 }
+.post-thumbnail img {
+    width: 100%;
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Crops the image to fit the container while maintaining aspect ratio */
+}
+
 
 .sticky-post-title {
     font-size: 1.5rem;
     text-align: left;
+}
+
+.content-section{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .post-date {
@@ -1065,16 +1083,46 @@ button{
     height: 16px;
 }
 
+.three-featured-posts {
+    display: flex;
+    justify-content: space-between; /* Ensures even spacing between columns */
+    margin-bottom: 20px; /* Optional: spacing between rows */
+}
+
+.featured-post-thumbnail{
+    margin: 0 0 10px;
+}
+
+.featured-post-thumbnail img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.sticky-post-title {
+    margin-top: 10px; /* Optional: spacing between image and title */
+    text-align: center; /* Center the title */
+}
+
+.featured-post-title{
+    margin: 0 0 18px;
+}
+
+.most-featured-post{
+    margin: 0 0 24px;
+    padding: 0 0 24px;
+}
+
 .most-featured-post-thumbnail {
     display: inline-block; /* Ensures the div fits the size of the image */
-    width: auto; /* Make sure the width adjusts based on the image */
+    width: 71%; /* Make sure the width adjusts based on the image */
     padding: 0; /* Remove any padding */
     margin-right: 15px; /* Remove any margin */
 }
 
 .most-featured-post-thumbnail img {
     display: block; /* Removes any extra space below the image */
-    width: 720px; /* Ensure the image fills the div */
+    width: 100%; /* Ensure the image fills the div */
     height: auto; /* Maintain the aspect ratio of the image */
     max-width: 100%; /* Prevents the image from overflowing */
 }
@@ -1095,4 +1143,14 @@ button{
 .comment-number, .like-number{
     margin: 0 16px 0 0;
     gap: 7px;
+}
+
+.featured-section{
+    margin: 0 0 32px;
+    padding: 0 0 32px;
+}
+
+.featured-post-title{
+    text-align: left;
+    font-size: 18px;
 }
