@@ -91,7 +91,7 @@
                     </div>
                     
                             
-                    <div class="site-header__region-selector-wrap" style="padding-left: 20px; font-weight:400;">
+                    <div class="site-header__region-selector-wrap">
                         <button class="site-header__region-select region-select" aria-expanded="false">
                             <span class="region-name">English</span>
                     

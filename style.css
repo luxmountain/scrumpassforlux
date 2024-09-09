@@ -127,8 +127,13 @@ body {
     display: flex;
 }
 
+.site-header__region-select{
+    padding: 10px;
+}
+
 .site-logo-link{
     display: flex;
+    margin: 0 0 16px;
 }
 
 .header .btn-primary:hover {
@@ -832,14 +837,9 @@ main {
     display: none; /* Initially hide the dropdown */
     position: absolute;
     background-color: white;
-    border-left: 1px solid #ccc;
     padding: 10px;
     width: 200px;
     z-index: 100;
-}
-
-.region-select{
-    border-left: 1px solid var(--dark);
 }
 
 .site-header__region-selector-dropdown ul {
@@ -899,18 +899,19 @@ main {
 }
 
 #primary-menu .menu-item {
-    margin-right: 15px; /* Add space between list items */
+    padding: 6px 16px 6px 0;
 }
 
-#primary-menu .menu-item:last-child {
-    margin-right: 0; /* Remove space after the last item */
-}
-
-#primary-menu .menu-item a {
+#primary-menu .menu-item a, .region-name {
     text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit the text color */
+    color: #696969; /* Inherit the text color */
+    font-size: 16px;
+    font-weight: 500;
 }
 
+.region-name{
+    padding: 0 10px 0 0;
+}
 .region-menu-wrap{
     display: flex;
 }
@@ -919,9 +920,6 @@ main {
     display: flex;
 }
 
-.login-search-wrap{
-    display: flex;
-}
 
 .login-search-wrap svg {
     width: 26px;
@@ -934,12 +932,20 @@ svg {
     width: 26px;
 }
 
+.dark-mode{
+    margin: 0 20px;
+    margin-right: -5px;
+}
+
+.nav-button-search{
+    margin: 0 0 0 45px;
+    padding: 14.4p 32.4px;
+}
 .login-search-wrap {
     display: flex;
-    justify-content: right; /* Centers the items horizontally */
+    justify-content: start; /* Centers the items horizontally */
     align-items: flex-start; /* Aligns items at the top */
-    gap: 10px; /* Optional: Adds space between items */
-    padding: 50px;
+    flex-direction: row;
 }
 
 button{
@@ -959,11 +965,6 @@ button{
 .nav-button-search {
     display: inline-flex;
     align-items: center;
-}
-
-.nav-button-search{
-    padding-right: 20px;
-    padding-left: 30px;
 }
 
 .login-link {
@@ -1032,4 +1033,25 @@ button{
 
 .featured-post-meta{
     display: flex;
+}
+
+
+.site-header__region-selector-wrap {
+    display: inline-block; /* Ensure the div size only depends on its content */
+    padding: 0; /* Remove any default padding */
+    margin-top: -3px;  /* Remove any margin */
+}
+
+.site-header__region-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon--caret-down {
+    width: 16px;
+    height: 16px;
 }
