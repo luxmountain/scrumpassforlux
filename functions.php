@@ -63,5 +63,10 @@ function lux_widget_areas(){
 
 add_action('widgets_init', 'lux_widget_areas');
 
+function custom_post_type_support() {
+   add_post_type_support( 'post', 'sticky' ); // For regular posts
+   // add_post_type_support( 'your_custom_post_type', 'sticky' ); // For custom post types
+}
+add_action( 'init', 'custom_post_type_support' );
 
 ?>

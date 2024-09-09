@@ -54,6 +54,14 @@ Author: Son
     box-sizing: border-box;
 }
 
+.sticky-post-title{
+    text-decoration: none;
+}
+
+.post-link{
+    text-decoration: none;
+    color: var(--post_content);
+}
 html {
     line-height: 1.15;
 }
@@ -68,7 +76,6 @@ body {
     height: 2.75rem;
     transition: all 0.4s ease-in-out
 }
-
 
 .btn:focus,
 .btn.focus {
@@ -114,6 +121,14 @@ body {
     border-color: transparent;
     font-size: 1rem;
     padding-top: 0.5rem
+}
+
+.site-header__region-selector-wrap{
+    display: flex;
+}
+
+.site-logo-link{
+    display: flex;
 }
 
 .header .btn-primary:hover {
@@ -741,6 +756,12 @@ div.comment:first-of-type {
     gap: 20px; /* Space between items */
 }
 
+.most-featured-post-meta{
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between items */
+}
+
 .meta-item {
     display: flex;
     align-items: center; /* Center items vertically within each meta-item */
@@ -753,6 +774,8 @@ div.comment:first-of-type {
 
 .icon-primary-color {
     fill: var(--dark); /* Default color, change as needed */
+    width: 16px;
+    height: 16px;
 }
 
 .icon:hover {
@@ -780,6 +803,8 @@ div.comment:first-of-type {
 
 .icon{
     margin: 0 18px 0 0 ;
+    width: 16px;
+    height: 16px;
 }
 
 .banner{
@@ -903,6 +928,12 @@ main {
     height: 26px;
 }
 
+svg {
+    display: block !important;
+    height: 26px;
+    width: 26px;
+}
+
 .login-search-wrap {
     display: flex;
     justify-content: right; /* Centers the items horizontally */
@@ -963,4 +994,42 @@ button{
 #site-navigation{
     justify-content: space-between;
     padding: 30px;
+}
+
+.most-featured-post{
+    display: flex;
+}
+
+.featured-post {
+    margin: 0 auto;
+}
+
+.sticky-posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featured-post-item {
+    max-width: 20%; /* Ensures each post takes up a third of the available width */
+    margin: 0 1%;   /* Adds a small gap between columns */
+}
+
+.post-thumbnail {
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+.sticky-post-title {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #777; /* Light grey color for the date */
+    text-align: left;
+}
+
+.featured-post-meta{
+    display: flex;
 }
