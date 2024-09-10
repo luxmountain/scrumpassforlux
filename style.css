@@ -63,6 +63,10 @@ Author: Son
     color: var(--post_content);
 }
 
+.post-link:hover{
+    text-decoration: underline;
+}
+
 html {
     line-height: 1.15;
 }
@@ -768,7 +772,8 @@ div.comment:first-of-type {
     display: flex;
     align-items: center; /* Center items vertically */
     margin-right: 1rem;
-    gap: 0.5rem
+    gap: 0.5rem;
+    font-weight: 400;
 }
 
 .meta-item {
@@ -1115,7 +1120,8 @@ button{
 
 .most-featured-post-thumbnail {
     display: inline-block; /* Ensures the div fits the size of the image */
-    width: 71%; /* Make sure the width adjusts based on the image */
+    width: 127%; /* Make sure the width adjusts based on the image */
+    max-width: 100%;
     padding: 0; /* Remove any padding */
     margin-right: 15px; /* Remove any margin */
 }
